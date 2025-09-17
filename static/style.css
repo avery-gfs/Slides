@@ -1,6 +1,7 @@
 :root {
   --r-main-color: #333;
   --r-heading-color: #333;
+  --r-heading-text-transform: none;
 }
 
 .reveal {

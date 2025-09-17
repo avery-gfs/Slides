@@ -1,0 +1,15 @@
+{
+  "name": "slides",
+  "type": "module",
+  "scripts": {
+    "fmt": "prettier --write . --prose-wrap=always"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "open": "^10.2.0",
+    "reveal.js": "^5.2.1"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  }
+}
