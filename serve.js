@@ -1,6 +1,5 @@
 import { resolve } from "node:path";
 import express from "express";
-import open from "open";
 
 const file = process.argv[2];
 const app = express();
@@ -21,5 +20,3 @@ app.listen(3000, () => {
   console.log(`serving: ${file}`);
   console.log("http://localhost:3000");
 });
-
-await open("http://localhost:3000");
