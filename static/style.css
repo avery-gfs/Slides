@@ -25,6 +25,10 @@ pre {
   background-color: #eee !important;
 }
 
+hr {
+  /*  display: none !important;*/
+}
+
 blockquote {
   padding-inline: 20px !important;
 }
@@ -33,8 +37,16 @@ pre {
   font-size: 0.8em !important;
 }
 
+code {
+  font-size: 0.8em !important;
+  background-color: #eee !important;
+  padding: 1px 4px;
+}
+
 pre code {
-  padding: 26px !important;
+  font-size: 1em !important;
+  padding: 20px !important;
+  max-height: none !important;
 }
 
 .MathJax_Display {
