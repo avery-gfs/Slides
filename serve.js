@@ -1,7 +1,13 @@
 import { resolve } from "node:path";
+import { readFile } from "node:fs/promises";
 import express from "express";
 
 const app = express();
+
+app.get(/\.md$/, async (req, res) => {
+  const md = await readFile("." + req.path, "utf8");
+  res.send(md.replaceAll(/<!--[\s\S]*?-->/g, "").trim());
+});
 
 app.get("/", (req, res) =>
   res.sendFile(`${import.meta.dirname}/static/contents.html`),
