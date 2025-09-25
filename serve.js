@@ -3,6 +3,10 @@ import express from "express";
 
 const app = express();
 
+app.get("/", (req, res) =>
+  res.sendFile(`${import.meta.dirname}/static/contents.html`),
+);
+
 app.use("/", express.static(`${import.meta.dirname}/static`));
 app.use("/", express.static("."));
 
