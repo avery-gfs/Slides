@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/reveal.js/dist/reveal.css" />
     <link rel="stylesheet" href="/reveal.js/dist/theme/white.css" />
     <link rel="stylesheet" href="/google-light.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/style.css" />
 
     <title>Slides</title>
   </head>
@@ -16,10 +16,13 @@
   <body>
     <div class="reveal">
       <div class="slides">
-        <section data-markdown="/slides.md" data-separator="\n(?=##)"></section>
+        <section
+          data-markdown="./README.md"
+          data-separator="\n(?=##)"
+        ></section>
       </div>
     </div>
 
-    <script type="module" src="main.js"></script>
+    <script type="module" src="/main.js"></script>
   </body>
 </html>

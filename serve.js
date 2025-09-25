@@ -1,7 +1,6 @@
 import { resolve } from "node:path";
 import express from "express";
 
-const file = process.argv[2];
 const app = express();
 
 app.use("/", express.static(`${import.meta.dirname}/static`));
@@ -12,11 +11,10 @@ app.use(
   express.static(`${import.meta.dirname}/node_modules/reveal.js`),
 );
 
-app.get("/slides.md", (req, res) => {
-  res.sendFile(resolve(file));
-});
+app.get(/.*/, (req, res) =>
+  res.sendFile(`${import.meta.dirname}/static/index.html`),
+);
 
 app.listen(3000, () => {
-  console.log(`serving: ${file}`);
   console.log("http://localhost:3000");
 });
