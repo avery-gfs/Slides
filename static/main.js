@@ -15,7 +15,12 @@ Reveal.initialize({
 
 const pyodideReady = (async () => {
   const { loadPyodide } = await import("https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.mjs");
-  return loadPyodide();
+  const py = await loadPyodide();
+  await py.loadPackage("micropip");         
+  await py.runPythonAsync(`
+    import micropip
+  `); // to import python libaries "await micropip.install(<libary-name>) e.g await micropip.install("tenacity")
+  return py;
 })();
 
 function injectRunButton() {
